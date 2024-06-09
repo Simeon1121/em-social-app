@@ -17,7 +17,7 @@ const Community = () => {
       setIsLoading(true);
 
       const request = await fetch(
-        "https://em-mern-social-app.onrender.com/api/v1/users/all"
+        "http://localhost:5340/api/v1/users/all"
       );
       const response = await request.json();
       // console.log(response.users);

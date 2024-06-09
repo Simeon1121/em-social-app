@@ -31,7 +31,7 @@ export const  UserProvider = ({ children })=>{
       
       try {
         setIsLoading(true);
-        const request = await fetch("https://em-mern-social-app.onrender.com/api/v1/users", {
+        const request = await fetch("https://em-backend-project-0fu5.onrender.com/api/v1/users", {
             headers: {
                 "Content-type": "application/json",
                 Authorization: `Bearer ${token}`,
@@ -86,7 +86,7 @@ export const  UserProvider = ({ children })=>{
     setIsClicked(true)
 
     try {
-      const response = await fetch("https://em-mern-social-app.onrender.com/api/v1/users/update-profile", {
+      const response = await fetch("http://localhost:5340/api/v1/users/update-profile", {
         method: "PATCH",
         body: formData,
         headers: {
@@ -100,7 +100,7 @@ export const  UserProvider = ({ children })=>{
         toast.success(result.message)
           // Fetch updated profile information
       const profileRequest = await fetch(
-        "https://em-mern-social-app.onrender.com/api/v1/users",
+        "http://localhost:5340/api/v1/users",
         {
           headers: {
             "Content-type": "application/json",
@@ -126,7 +126,7 @@ export const  UserProvider = ({ children })=>{
       
     try {
       setIsLoading(true);
-      const request = await fetch("https://em-mern-social-app.onrender.com/api/v1/posts/timeline", {
+      const request = await fetch("http://localhost:5340/api/v1/posts/timeline", {
           headers: {
               "Content-type": "application/json",
               Authorization: `Bearer ${token}`,

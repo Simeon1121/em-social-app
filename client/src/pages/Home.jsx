@@ -72,7 +72,7 @@ const Home = () => {
   // second
   const handleLike = async (postId) => {
     try {
-      const response = await fetch(`https://em-mern-social-app.onrender.com/api/v1/posts/like-post/${postId}`, {
+      const response = await fetch(`http://localhost:5340/api/v1/posts/like-post/${postId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -139,7 +139,7 @@ const Home = () => {
   const handlePost = async (data) => {
     try {
       const request = await fetch(
-        "https://em-mern-social-app.onrender.com/api/v1/posts/create-post",
+        "http://localhost:5340/api/v1/posts/create-post",
         {
           method: "POST",
           headers: {

@@ -17,7 +17,7 @@ function CommentModal({ postId, show, onHide,onCommentAdded }) {
     try {
       setIsLoading(true)
       const response = await fetch(
-        `https://em-mern-social-app.onrender.com/api/v1/posts/comments/${postId}`
+        `http://localhost:5340/api/v1/posts/comments/${postId}`
       );
       const data = await response.json();
       console.log(data);
@@ -43,7 +43,7 @@ function CommentModal({ postId, show, onHide,onCommentAdded }) {
 
     try {
       const response = await fetch(
-        `https://em-mern-social-app.onrender.com/api/v1/posts/comment-post/${postId}`,
+        `http://localhost:5340/api/v1/posts/comment-post/${postId}`,
         {
           method: "POST",
           headers: {

@@ -29,7 +29,7 @@ const ResetPassword = () => {
 
     try {
       const request = await fetch(
-        "https://em-mern-social-app.onrender.com/api/v1/auth/forgotpassword",
+        "http://localhost:5340/api/v1/auth/forgotpassword",
         {
           method: "POST",
           headers: {

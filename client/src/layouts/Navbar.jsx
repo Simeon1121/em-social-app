@@ -25,7 +25,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const getBioProfile = async () => {
     try {
-      const request = await fetch("https://em-mern-social-app.onrender.com/api/v1/users", {
+      const request = await fetch("http://localhost:5340/api/v1/users", {
         headers: {
           "Content-type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -47,7 +47,7 @@ const Navbar = () => {
       if (term) {
         try {
           const request = await fetch(
-            `https://em-mern-social-app.onrender.com/api/v1/users/search?searchTerm=${term}`,
+            `http://localhost:5340/api/v1/users/search?searchTerm=${term}`,
             {
               headers: {
                 "Content-type": "application/json",

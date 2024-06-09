@@ -41,7 +41,7 @@ const ResetPasswordLink = () => {
     setIsClicked(true)
     try {
       
-      const req = await fetch(`https://em-mern-social-app.onrender.com/api/v1/auth/resetpassword/${resetToken}`,{
+      const req = await fetch(`http://localhost:5340/api/v1/auth/resetpassword/${resetToken}`,{
         method:"PUT",
         headers:{
           "Content-Type":"application/json"
